@@ -21,7 +21,7 @@ export default function HomePage() {
         {/* Background image */}
         <div className="absolute inset-0">
           <Image
-            src="https://images.unsplash.com/photo-1529692236671-f1f6cf9683ba?auto=format&fit=crop&w=1800&q=80"
+            src="https://images.unsplash.com/photo-1467003909585-2f8a72700288?auto=format&fit=crop&w=1800&q=80"
             alt="Meat grilling over binchōtan charcoal"
             fill
             priority
@@ -102,8 +102,8 @@ export default function HomePage() {
           <ScrollReveal delay={140}>
             <div className="relative aspect-[4/3] overflow-hidden">
               <Image
-                src="https://images.unsplash.com/photo-1544025162-d76694265947?auto=format&fit=crop&w=900&q=80"
-                alt="Binchōtan charcoal grill"
+                src="https://images.unsplash.com/photo-1574071318508-1cdbab80d002?auto=format&fit=crop&w=900&q=80"
+                alt="Binchōtan charcoal embers"
                 fill
                 className="object-cover"
                 sizes="(max-width: 768px) 100vw, 50vw"
@@ -158,8 +158,8 @@ export default function HomePage() {
           <ScrollReveal>
             <div className="relative aspect-[4/3] overflow-hidden">
               <Image
-                src="https://images.unsplash.com/photo-1558030006-450675393462?auto=format&fit=crop&w=900&q=80"
-                alt="Premium yakiniku cut on the grill"
+                src="https://images.unsplash.com/photo-1466637574441-749b8f19452f?auto=format&fit=crop&w=900&q=80"
+                alt="Premium wagyu steak"
                 fill
                 className="object-cover"
                 sizes="(max-width: 768px) 100vw, 50vw"

@@ -26,8 +26,8 @@ export default function AboutPage() {
           <ScrollReveal>
             <div className="relative aspect-[3/4] overflow-hidden">
               <Image
-                src="https://images.unsplash.com/photo-1555126634-323283e090fa?auto=format&fit=crop&w=900&q=80"
-                alt="The kitchen at Kokuyō Yakiniku"
+                src="https://images.unsplash.com/photo-1414235077428-338989a2e8c0?auto=format&fit=crop&w=900&q=80"
+                alt="Kokuyō Yakiniku dining interior"
                 fill
                 className="object-cover"
                 sizes="(max-width: 768px) 100vw, 50vw"
@@ -67,8 +67,8 @@ export default function AboutPage() {
           <ScrollReveal delay={140}>
             <div className="relative aspect-[4/3] overflow-hidden">
               <Image
-                src="https://images.unsplash.com/photo-1547592180-85f173990554?auto=format&fit=crop&w=900&q=80"
-                alt="Fresh halal ingredients"
+                src="https://images.unsplash.com/photo-1540189549336-e6e99c3679fe?auto=format&fit=crop&w=900&q=80"
+                alt="Fresh premium ingredients"
                 fill
                 className="object-cover"
                 sizes="(max-width: 768px) 100vw, 50vw"
