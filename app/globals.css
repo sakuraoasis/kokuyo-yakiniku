@@ -1,26 +1,111 @@
 @import "tailwindcss";
 
-:root {
-  --background: #ffffff;
-  --foreground: #171717;
-}
-
 @theme inline {
-  --color-background: var(--background);
-  --color-foreground: var(--foreground);
-  --font-sans: var(--font-geist-sans);
-  --font-mono: var(--font-geist-mono);
+  /* ── Typefaces ────────────────────────────────────── */
+  --font-serif: var(--font-cormorant), "Cormorant Garamond", Georgia, serif;
+  --font-sans:  var(--font-inter), var(--font-noto), "Noto Sans JP", sans-serif;
+
+  /* ── Coal — near-black, warm ─────────────────────── */
+  --color-coal-950: #070503;
+  --color-coal-900: #0e0b08;
+  --color-coal-800: #181410;
+  --color-coal-700: #231e18;
+  --color-coal-600: #302820;
+  --color-coal-500: #403830;
+
+  /* ── Ember — amber/orange accent ─────────────────── */
+  --color-ember-900: #4a2a0a;
+  --color-ember-700: #7c4818;
+  --color-ember-600: #9a5e28;
+  --color-ember-500: #bc7838;
+  --color-ember-400: #d49050;
+  --color-ember-300: #e8ae78;
+  --color-ember-200: #f2cba0;
+  --color-ember-100: #fae8d0;
+
+  /* ── Cream — warm light surfaces / text on dark ──── */
+  --color-cream-50:  #faf8f4;
+  --color-cream-100: #f4f0e8;
+  --color-cream-200: #e8e0d4;
+  --color-cream-300: #d4cab8;
+  --color-cream-400: #b8a890;
+
+  /* ── Ash — mid neutrals ───────────────────────────── */
+  --color-ash-800: #d0c8bc;
+  --color-ash-700: #b8b0a4;
+  --color-ash-600: #9a9088;
+  --color-ash-500: #7a7068;
+  --color-ash-400: #5a5048;
+
+  /* ── Sage — halal accent ─────────────────────────── */
+  --color-sage-800: #2e4a36;
+  --color-sage-700: #3d604a;
+  --color-sage-600: #4e7860;
+  --color-sage-400: #7ab090;
+  --color-sage-200: #b8d8c4;
 }
 
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
-  }
+/* ── Base ──────────────────────────────────────────── */
+html {
+  background-color: #0e0b08;
 }
 
 body {
-  background: var(--background);
-  color: var(--foreground);
-  font-family: Arial, Helvetica, sans-serif;
+  font-family: var(--font-sans);
+  background-color: #0e0b08;
+  color: #f4f0e8;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+/* ── Typography helpers ────────────────────────────── */
+.font-serif {
+  font-family: var(--font-serif);
+}
+
+/* ── Ember rule — thin horizontal accent line ─────── */
+.ember-rule {
+  width: 40px;
+  height: 1px;
+  background-color: var(--color-ember-500);
+}
+
+/* ── Halal mark — typographic, no box ────────────── */
+.halal-mark {
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+  font-size: 0.6rem;
+  letter-spacing: 0.22em;
+  text-transform: uppercase;
+  color: var(--color-sage-400);
+  font-weight: 500;
+}
+
+.halal-mark::before,
+.halal-mark::after {
+  content: "";
+  flex-shrink: 0;
+  width: 18px;
+  height: 1px;
+  background-color: var(--color-sage-600);
+  opacity: 0.6;
+}
+
+/* ── ScrollReveal initial state ───────────────────── */
+.reveal {
+  opacity: 0;
+  transform: translateY(18px);
+  transition: opacity 0.7s ease, transform 0.7s ease;
+}
+
+.reveal.visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* ── RTL overrides ────────────────────────────────── */
+[dir="rtl"] .ember-rule {
+  margin-right: 0;
+  margin-left: auto;
 }
