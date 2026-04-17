@@ -92,6 +92,15 @@ body {
   opacity: 0.6;
 }
 
+/* ── Page transition — subtle fade-up on every route change ── */
+@keyframes page-fade {
+  from { opacity: 0; transform: translateY(6px); }
+  to   { opacity: 1; transform: translateY(0); }
+}
+.animate-page-fade {
+  animation: page-fade 0.18s ease forwards;
+}
+
 /* ── ScrollReveal initial state ───────────────────── */
 .reveal {
   opacity: 0;
